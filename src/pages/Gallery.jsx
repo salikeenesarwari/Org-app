@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { galleryImages } from '../data/gallery';
+import { khankhaEvents } from '../data/khankhaEvents';
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -13,15 +13,15 @@ function Gallery() {
         </div>
 
         <div className="gallery-grid">
-          {galleryImages.map((image) => (
+          {khankhaEvents.map((image) => (
             <div 
               key={image.id} 
               className="gallery-item"
               onClick={() => setSelectedImage(image)}
             >
               <img 
-                src={image.url} 
-                alt={image.caption}
+                src={image.image} 
+                alt={image.title}
                 onError={(e) => {
                   e.target.src = 'https://via.placeholder.com/400x400/2563eb/ffffff?text=Photo';
                 }}
@@ -49,22 +49,14 @@ function Gallery() {
           >
             <div style={{ maxWidth: '90%', maxHeight: '90%' }}>
               <img 
-                src={selectedImage.url} 
-                alt={selectedImage.caption}
+                src={selectedImage.image} 
+                alt={selectedImage.title}
                 style={{ 
                   maxWidth: '100%', 
                   maxHeight: '80vh',
                   borderRadius: '8px' 
                 }}
               />
-              <p style={{ 
-                color: 'white', 
-                textAlign: 'center', 
-                marginTop: '1rem',
-                fontSize: '1.125rem'
-              }}>
-                {selectedImage.caption}
-              </p>
             </div>
           </div>
         )}

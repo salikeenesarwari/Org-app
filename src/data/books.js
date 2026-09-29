@@ -8,6 +8,7 @@ export const books = [
     language: "Urdu/English",
     cover: "/images/books/faizan-tasawwuf-cover.jpg",
     file: "/books/faizan-e-tasawuff.pdf",
+    readUrl: "https://drive.google.com/file/d/1365-q9AtXvSUnbAf2zF1y7oedGtc2q2O/preview",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const books = [
     language: "Urdu",
     cover: "/images/books/fatiha-cover.png",
     file: "/books/fatiha-ka-tariqa.pdf",
+    readUrl: "https://drive.google.com/file/d/1KJ_6xagRibMVioZAzHwIOY7azZrUtW9v/preview",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ export const books = [
     level: "Advanced",
     cover: "/images/books/ramz-sarwari-cover.png",
     file: "/books/ramz-sarwari.pdf",
+    readUrl: "https://drive.google.com/file/d/1Mjc6z7S0ZRggy3JCK_RXSp8VJrFQz7F7/preview",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ export const books = [
     content: "Practical Guidance",
     cover: "/images/books/ilm-tariqat-cover.png",
     file: "/books/ilm-e-tariqat.pdf",
+    readUrl: "https://drive.google.com/file/d/1OO_uEbcMiTbl3jbnQhMQ1j14Oq-zlpQo/preview",
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ export const books = [
     theme: "Truth Recognition",
     cover: "/images/books/haq-pehchan-cover.png",
     file: "/books/haq-ki-pehchan.pdf",
+    readUrl: "https://drive.google.com/file/d/1RslDp7-ZbAl2dEvGnDI_NgJpJIakxtKQ/preview",
   },
   {
     id: 6,

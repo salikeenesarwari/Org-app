@@ -13,7 +13,7 @@ function Navigation() {
         <div className="nav-content">
           <Link to="/" className="nav-brand">
             Welcome to Faizan e Sarwari <br/>
-            (فیضان سروائی)<br/>
+            (فیضان سروری)<br/>
             <span style={{ fontSize: '0.8rem', color: '#64748b' }}>
               A Spiritual Journey of Love and Devotion
             </span>
@@ -38,11 +38,29 @@ function Navigation() {
             </li>
             <li>
               <Link 
+                to="/sijra-munajat" 
+                className={isActive('/sijra-munajat') ? 'active' : ''}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Sijra & Munajat
+              </Link>
+            </li>
+            <li>
+              <Link 
                 to="/books" 
                 className={isActive('/books') ? 'active' : ''}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Books
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/important-daleels" 
+                className={isActive('/important-daleels') ? 'active' : ''}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Important Daleels
               </Link>
             </li>
             <li>

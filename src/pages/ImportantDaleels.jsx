@@ -1,45 +1,34 @@
-import { books } from '../data/books';
+import { importantDaleels } from '../data/importantDaleels';
 
-function Books() {
+function ImportantDaleels() {
   return (
     <div className="page">
       <div className="container">
         <div className="page-header">
-          <h1 className="page-title">Books by Hazrat Sultan Sarwar Ali Shah</h1>
-          <p className="page-subtitle">Spiritual works illuminating the path of Tasawwuf and Divine Love</p>
+          <h1 className="page-title">Important Daleels</h1>
+          <p className="page-subtitle">Essential proofs and evidences from Islamic sources</p>
         </div>
 
         <div className="card-grid">
-          {books.map((book) => (
-            <div key={book.id} className="card">
-              <img 
-                src={book.cover} 
-                alt={book.title}
-                className="card-image"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/300x400/2563eb/ffffff?text=Book+Cover';
-                }}
-              />
+          {importantDaleels.map((daleel) => (
+            <div key={daleel.id} className="card">
               <div className="card-content">
-                <h3 className="card-title">{book.title}</h3>
-                <p className="card-text">{book.description}</p>
-                {book.category && (
-                  <p className="card-meta">📚 Category: {book.category}</p>
+                <h3 className="card-title">{daleel.title}</h3>
+                <p className="card-text">{daleel.description}</p>
+                {daleel.language && (
+                  <p className="card-meta">🌐 Language: {daleel.language}</p>
                 )}
-                {book.language && (
-                  <p className="card-meta">🌐 Language: {book.language}</p>
-                )}
-                {book.status && (
+                {daleel.status && (
                   <p className="card-meta" style={{ color: '#f59e0b', fontWeight: 'bold' }}>
-                    ⏳ Status: {book.status}
+                    ⏳ Status: {daleel.status}
                   </p>
                 )}
                 <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem', flexWrap: 'wrap' }}>
-                  {book.file ? (
+                  {daleel.file ? (
                     <>
-                      {book.readUrl ? (
+                      {daleel.readUrl ? (
                         <a 
-                          href={book.readUrl}
+                          href={daleel.readUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="btn"
@@ -52,7 +41,7 @@ function Books() {
                         </a>
                       ) : null}
                       <a 
-                        href={book.file}
+                        href={daleel.file}
                         download
                         className="btn"
                         style={{ 
@@ -60,19 +49,14 @@ function Books() {
                           backgroundColor: '#2563eb'
                         }}
                       >
-                        📥 Download Book
+                        📥 Download
                       </a>
                     </>
-                  ) : book.status === "Coming Soon" ? (
+                  ) : daleel.status === "Coming Soon" ? (
                     <span className="btn" style={{ backgroundColor: '#94a3b8', cursor: 'not-allowed' }}>
                       🔜 Coming Soon
                     </span>
                   ) : null}
-                  {book.link && book.link !== "#" && (
-                    <a href={book.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                      View Details
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
@@ -83,4 +67,4 @@ function Books() {
   );
 }
 
-export default Books;
+export default ImportantDaleels;
