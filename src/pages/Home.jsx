@@ -202,11 +202,9 @@ function Home() {
 
         <div className="about-section" style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h2>Total Visitors</h2>
-          <img
-            src="https://api.visitorbadge.io/api/visitors?path=salikeenesarwari%2FOrg-app&label=Visitors&countColor=%2310b981"
-            alt="Total website visitors"
-            style={{ minHeight: '28px' }}
-          />
+          <p style={{ fontSize: '1.5rem', fontWeight: '700', color: '#10b981', margin: 0 }}>
+            0
+          </p>
         </div>
       </div>
     </div>
