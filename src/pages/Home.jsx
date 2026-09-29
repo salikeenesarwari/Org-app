@@ -199,6 +199,15 @@ function Home() {
             <p><strong>Website:</strong> <a href={orgInfo.contact.website} target="_blank" rel="noopener noreferrer">{orgInfo.contact.website}</a></p>
           )}
         </div>
+
+        <div className="about-section" style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h2>Total Visitors</h2>
+          <img
+            src="https://api.visitorbadge.io/api/visitors?path=salikeenesarwari%2FOrg-app&label=Visitors&countColor=%2310b981"
+            alt="Total website visitors"
+            style={{ minHeight: '28px' }}
+          />
+        </div>
       </div>
     </div>
   );
